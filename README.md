@@ -10,6 +10,8 @@ socialmaps-items.json         # The services listed on the map
 socialmaps-translations.json  # The translations for the socialmaps ui
 ```
 
+## Items
+
 The items data can be described as follows:
 ```
 
@@ -74,3 +76,62 @@ The items data can be described as follows:
     },
 ```
 
+## Translations
+
+Translation fields relevant to items are described below:
+```
+{
+   ...
+   // german translations:
+   'DE' :{
+     ...
+     // User interface text for the item editor
+     // Contains description of most item properties:
+     'ITEMS': {
+
+       ...
+
+       // Label of the property 'brief' in the item editor:
+       "BRIEF": "...",
+
+       // Extra info about the property next to the label:
+       "BRIEF_NOTE": "...",
+
+       // Help text displayed after clicking a help button
+       "BRIEF_HELP": "..."
+     },
+
+     "TYPES": {
+       ...,
+       "SERVICE" : "..."
+     },
+
+     "CATEGORIES": {
+       ...,
+       "SPORTS" : "..."
+     },
+
+     "UNSORTED_TAGS": {
+       ...
+       "SENIOR_CITIZENS" : "..."
+     },
+
+}
+```
+
+## Tags
+
+The tags in the .tags property of items can include strings from types,
+categories or unsorted_tags, e.g.:
+
+```
+{
+   "title": "My Example Item",
+   "tags": ["service", "sports", "senior_citizens"],
+   ...
+}
+```
+
+In this case the translation for the 'sports' tag can be found in
+"DE.CATEGORIES.SPORTS"; and the translation for the 'senior_citizens'
+can be found in "DE.UNSORTED_TAGS.SENIOR_CITIZENS".
